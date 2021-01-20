@@ -1,0 +1,18 @@
+@tablet-up: ~'(min-width: 768px)';
+@phablet-up: ~'(min-width: 480px)';
+.product-category-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    & > li{
+        width: 100%;
+        @media @phablet-up{
+            padding: 0 10px;
+            width: 50%;
+        }
+        @media @tablet-up{
+            width: 33.333%;
+            padding: 0 15px;
+        }
+    }
+}

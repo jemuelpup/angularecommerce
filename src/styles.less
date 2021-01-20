@@ -1,1 +1,288 @@
+@phablet-up: ~'(min-width: 480px)';
+@tablet-up: ~'(min-width: 768px)';
+@tablet-landscape-up: ~'(min-width: 900px)';
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; font-size: 14px; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+	box-sizing: border-box;
+}
+.wrap-inner{
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.primary-button{
+	border-color: #4527A0!important;
+	background-color: #4527A0;
+	color: #fff;
+	&:hover{
+		opacity: 0.9;
+	}
+}
+.view-button{
+	border-color: #f6f6f6!important;
+	background-color: #f6f6f6;
+	color: #4527A0;
+	&:hover{
+		opacity: 0.9;
+	}
+}
+.primary-reversed{
+	background-color: #fff;
+	color: #4527A0;
+	border-color: #4527A0;
+	&:hover{
+		opacity: 0.9;
+	}
+}
+.transparent-white{
+	background-color: transparent;
+	color: #fff;
+	border-color: #fff;
+	&:hover{
+		background-color: #fff;
+		color: #000;
+	}
+}
+img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.input-form-container{
+	margin-bottom: 30px;
+	@media @tablet-up{
+		margin-bottom: 60px;
+	}
+}
+.section-heading{
+	margin-bottom: 14px;
+	@media @tablet-up{
+		margin-bottom: 40px;
+	}
+}
+.btn,
+.btn.mat-button{
+	transition: all 350ms ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+    height: 50px;
+	border-radius: 10px;
+	text-transform: uppercase;
+	letter-spacing: normal;
+	border: 1px solid;
+	text-decoration: none;
+	@media @tablet-landscape-up{
+		letter-spacing: 1.5px;
+	}
+}
+.section-text-container{
+	max-width: 500px;
+	text-align: center;
+	margin: 40px auto;
+	@media @tablet-up{
+		margin: 80px auto;
+	}
+	.page-section-header{
+		font-size: 24px;
+		color: #311B92;
+		@media @tablet-up{
+			font-size: 40px;
+		}
+	}
+	.page-section-header-desc{
+		font-size: 14px;
+		@media @tablet-up{
+			font-size: 16px;
+		}
+	}
+}
+
+.blog-card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	margin-bottom: 60px;
+	.blog-info{
+		border-top: 4px solid #4527A0;
+		padding: 17px 14px;
+	}
+	.blog-title{
+		font-size: 18px;
+		font-weight: 700;
+		padding: 5px 0;
+	}
+	.blog-description{
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 18px;
+		@media @tablet-up{
+			margin-bottom: 30px;
+		}
+	}
+	.read-more-link{
+		font-size: 16px;
+		font-weight: 700;
+		color: #4527A0;
+		text-decoration: none;
+	}
+}
+
+// login and registration
+.login-and-registration-page-layout{
+	padding: 24px 20px;
+	@media @tablet-up{
+		padding: 80px 40px;
+	}
+    .login-content-container{
+		@media @tablet-up{
+			display: flex;
+			align-items: center;
+		}
+    }
+    .login-form-container,
+    .login-background{
+		@media @tablet-up{
+			width: 50%;
+		}
+	}
+	.login-background{
+		display: none;
+		@media @tablet-up{
+			display: block;
+		}
+	}
+    .login-wrapper{
+		padding: 34px 24px;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+		flex-direction: column;
+		@media @tablet-up{
+			max-width: 500px;
+			padding: 80px 60px;
+		}
+    }
+    h1{
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: .86px;
+        text-align: center;
+        color: #2d2d2d;
+    }
+    p{
+        font-size: 14px;
+        max-width: 357px;
+        text-align: center;
+		margin: 0 auto;
+		@media @tablet-up{
+			font-size: 16px;
+		}
+    }
+    .forgot-password-link{
+        display: inline-block;
+        margin: 40px auto 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+		font-weight: 700;
+		color: #4527A0;
+		text-decoration: none;
+    }
+    .mat-form-field{
+        width: 100%;
+    }
+    .primary-reversed,
+    .primary-button{
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+	}
+	.primary-reversed{
+		margin-top: 11px;
+	}
+}
+
+.rating{
+	display: flex;
+	margin-bottom: 10px;
+	li{
+		padding: 0;
+	}
+}
+.mat-form-field-subscript-wrapper{
+	transition: opacity 350ms ease;
+	opacity: 0;
+	.mat-hint{
+		color: #f44336;
+	}
+}
+
+.mat-form-field.ng-invalid.ng-touched,
+.mat-form-field-invalid{
+	.mat-form-field-subscript-wrapper{
+		opacity: 1;
+	}
+}
+
+.discounted-price{
+	margin-right: 20px;
+	color: #f44336;
+}
+.discounted{
+	.original-price{
+		text-decoration: line-through;
+		color: #b1b1b1;
+	}
+}

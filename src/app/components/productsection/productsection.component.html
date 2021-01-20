@@ -1,0 +1,13 @@
+<div class="home-banner-container">
+    <div class="wrap-inner">
+        <div class="section-text-container">
+            <h2 class="page-section-header">{{sectionTitle}}</h2>
+            <p *ngIf="sectionDescription" class="page-section-header-desc">{{sectionDescription}}</p>
+        </div>
+        <ul class="product-list">
+            <li *ngFor="let number of [0,1,2]">
+                <app-productcard></app-productcard>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="product-card">
+    <div class="product-image">
+        <img mat-card-image src="assets/images/board.png" alt="Photo of a Shiba Inu">
+    </div>
+    <div class="product-info">
+        <ul class="rating">
+            <li *ngFor="let number of [0,1,2,3,4]">
+                <mat-icon aria-hidden="false" aria-label="star">star</mat-icon>
+            </li>
+        </ul>
+        <p class="product-title">Product name</p>
+        <p class="product-price discounted">
+            <span class="discounted-price">{{4|priceformat:"USD"}}</span>
+            <span class="original-price">{{4|priceformat:"USD"}}</span>
+        </p>
+    </div>
+    <div class="card-action-container">
+        <a href="/product" mat-button class="btn view-button">View Product</a>
+        <a href="/" mat-button class="btn primary-button">Add To Cart</a>
+    </div>
+</div>

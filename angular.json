@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.less"
             ],
             "scripts": []
@@ -127,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "exam1"
+  "defaultProject": "exam1",
+  "cli": {
+    "analytics": "984097ab-e351-4af6-a1da-69593439bfcd"
+  }
 }

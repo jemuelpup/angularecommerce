@@ -1,0 +1,12 @@
+@tablet-up: ~'(min-width: 768px)';
+.blog-list{
+    @media @tablet-up{
+        display: flex;
+    }
+    & > li{
+        @media @tablet-up{
+            width: 33.3333%;
+            padding: 0 20px;
+        }
+    }
+}

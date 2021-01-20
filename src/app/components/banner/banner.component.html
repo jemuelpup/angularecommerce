@@ -1,0 +1,11 @@
+<div
+    class="banner {{addedClass}}"
+    [style.background-image]="'url('+ bannerImage +')'">
+    <div class="text-container">
+        <div class="wrap-inner">
+            <h1 class="mat-display-4">{{bannerTitle}}</h1>
+            <p class="banner-text">{{bannerDescription}}</p>
+            <a *ngIf="bannerLink" mat-button class="banner-button btn transparent-white" href={{bannerLink}}>{{bannerLinkText}}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+<div class="wrap-inner">
+    <div class="product-data-container">
+        <div class="product-gallery">
+            <div class="product-image">
+                <img mat-card-image src="assets/images/board.png" alt="Photo of a Shiba Inu">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1 class="product-title">Product name</h1>
+            <ul class="rating">
+                <li *ngFor="let number of [0,1,2,3,4]">
+                    <mat-icon aria-hidden="false" aria-label="star">star</mat-icon>
+                </li>
+            </ul>
+            <p class="product-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam voluptate rem consectetur culpa id harum ipsa! Est alias fuga facilis voluptate maxime, voluptatibus et accusamus fugiat? Suscipit amet accusantium nisi?</p>
+            <p class="product-price discounted">
+                <span class="discounted-price">{{4|priceformat:"USD"}}</span>
+                <span class="original-price">{{4|priceformat:"USD"}}</span>
+            </p>
+            <div class="card-action-container">
+                <a href="/" mat-button class="btn primary-button">Add To Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-productsection
+    sectionTitle="You might also like"
+    sectionDescription="Enjoy our product discounts">
+</app-productsection>
+<app-instagramsection></app-instagramsection>

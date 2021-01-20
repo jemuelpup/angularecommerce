@@ -1,0 +1,22 @@
+@phablet-up: ~'(min-width: 480px)';
+@tablet-up: ~'(min-width: 768px)';
+
+.instagram-footer{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        width: 50%;
+        @media @phablet-up{
+            width: 25%;
+        }
+    }
+}
+.section-text-container{
+    max-width: none;
+    .page-section-header{
+        margin-bottom: 18px;
+        @media @tablet-up{
+            margin-bottom: 30px;
+        }
+    }
+}

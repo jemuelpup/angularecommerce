@@ -1,0 +1,38 @@
+<div class="wrap-inner login-and-registration-page-layout">
+    <div class="login-content-container">
+        <div class="login-background">
+            <img src={{loginBackground}} alt="login background">
+        </div>
+        <div class="login-form-container">
+            <div [class.mat-elevation-z6]="true" class="login-wrapper">
+                <div class="section-heading">
+                    <h1>Welcome Back</h1>
+                    <p>Log in to access your account information.<br/>Don’t have an account? Simply create one with us.</p>
+                </div>
+                <form class="login-form" (ngSubmit)="submitForm()" [formGroup]="loginForm">
+                    <div class="input-form-container">
+                        <mat-form-field appearance="standard">
+                            <mat-label>Email</mat-label>
+                            <input
+                                formControlName="email"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="standard">
+                            <mat-label>Password</mat-label>
+                            <input type="password"
+                                formControlName="password"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <button mat-button class="btn primary-button" type="submit">LOGIN</button>
+                </form>
+                <a mat-button class="btn primary-reversed" href="/registration">Register</a>
+                <a class="forgot-password-link" href="/forgotpassword">Forgot your password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-instagramsection></app-instagramsection>

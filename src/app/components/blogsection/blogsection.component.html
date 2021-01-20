@@ -1,0 +1,22 @@
+<div class="blog-section-container">
+    <div class="wrap-inner">
+        <div class="section-text-container">
+            <h2 class="page-section-header">Blogs</h2>
+            <p class="page-section-header-desc">Read our match reviews and game tips</p>
+        </div>
+        <ul class="blog-list">
+            <li class="blog" *ngFor="let number of [3,4,5]">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img mat-card-image src="assets/images/instagramsample/img{{number}}.png" alt="Photo of a Shiba Inu">
+                    </div>
+                    <div class="blog-info">
+                        <p class="blog-title">Blog name</p>
+                        <p class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, nemo et possimus numquam excepturi ipsum illum eligendi maxime sint tempora iste optio dolores autem ut eveniet magnam obcaecati! Error, sunt!</p>
+                        <a href="/blog" class="read-more-link">Read More</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

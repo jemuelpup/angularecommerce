@@ -1,0 +1,78 @@
+<div class="wrap-inner login-and-registration-page-layout">
+    <div class="login-content-container">
+        <div class="login-background">
+            <img src={{loginBackground}} alt="login background">
+        </div>
+        <div class="login-form-container">
+
+            <div [class.mat-elevation-z6]="true" class="login-wrapper">
+                <div class="section-heading">
+                    <h1>Create account</h1>
+                    <p>Create account to for your first step to become grand master.</p>
+                </div>
+                <form class="login-form" (submit)="submitForm()" [formGroup]="registrationForm">
+                    <div class="input-form-container">
+                        <mat-form-field appearance="standard">
+                            <mat-label>First Name</mat-label>
+                            <input
+                                formControlName="firstName"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Last Name</mat-label>
+                            <input
+                                formControlName="lastName"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Address</mat-label>
+                            <input
+                                formControlName="address"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Phone number</mat-label>
+                            <input
+                                formControlName="phoneNumber"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+
+
+                        <mat-form-field appearance="standard">
+                            <mat-label>Email</mat-label>
+                            <input
+                                formControlName="email"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Password</mat-label>
+                            <input
+                                type="password"
+                                formControlName="password"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Confirm password</mat-label>
+                            <input
+                                type="password"
+                                formControlName="confirmPassword"
+                                matInput placeholder="">
+                            <mat-hint>Invalid</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <button mat-button class="btn primary-button" type="submit">Submit</button>
+                </form>
+                <button (click)="resetForm()" mat-button class="reset-button btn primary-reversed" type="submit">Clear</button>
+                <a class="forgot-password-link" href="/login">Back to login</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<app-instagramsection></app-instagramsection>
